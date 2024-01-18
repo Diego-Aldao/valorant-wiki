@@ -12,10 +12,14 @@ const config: Config = {
         "main-red":"#fe4655",
         "secondary-red":"#ff7864",
         "main-black":"#302732",
+        "secondary-black":"#8c818a",
+        "terciary-black":"#3c323e",
         "main-white":"#ece8e1",
+        "secondary-white":"#b9b0b8",
       },
       fontFamily:{
-        sans: "var(--raleway-font)"
+        sans: "var(--raleway-font)",
+        bebas: "var(--bebas-font)",
       },
     },
   },
