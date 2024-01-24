@@ -33,9 +33,9 @@ export default function RootLayout({
       className={`${raleway.variable} ${bebas.variable} antialiased`}
     >
       <body>
-        <div className="grid md:grid-cols-[80px,1fr] w-full max-w-7xl mx-auto relative first-c">
+        <div className="grid md:grid-cols-[80px,1fr] w-full max-w-7xl mx-auto relative">
           <Aside />
-          <div className="md:col-start-2 relative w-full min-w-[100%]">
+          <div className="md:col-start-2 relative w-full min-w-[100%] h-fit">
             <Header />
             {children}
             <Footer />
