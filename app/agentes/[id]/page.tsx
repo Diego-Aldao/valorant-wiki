@@ -10,6 +10,7 @@ import DecoracionRol from "@/app/components/PageAgentes/AgentesID/DecoracionRol"
 import MainInfo from "@/app/components/PageAgentes/AgentesID/MainInfo";
 import { LS_AGENTES, URL_FETCH_AGENTES } from "@/app/constants";
 import useFilterAgentes from "@/app/hooks/useFilterAgentes";
+import { Icon } from "@iconify/react";
 
 export default function PaginaAgentesID() {
   const { data: dataAgentes } = useFetch<RespuestaAPIAgentes>(
@@ -47,6 +48,12 @@ export default function PaginaAgentesID() {
         insideStyles="md:bg-main-red after:bg-main-red md:after:bg-main-black text-xs lg:text-sm text-main-white"
         nombre="volver a la lista"
         link="agentes"
+        leftChildren={
+          <Icon
+            icon="solar:alt-arrow-left-broken"
+            className="w-4 h-4 text-main-white"
+          />
+        }
       />
     </CustomSectionID>
   );
