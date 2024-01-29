@@ -5,6 +5,7 @@ interface Props {
   outsideStyles: string;
   insideStyles: string;
   children?: React.ReactNode;
+  leftChildren?: React.ReactNode;
   nombre: string;
   link?: string;
 }
@@ -15,6 +16,7 @@ const MainButton = ({
   children,
   link,
   nombre,
+  leftChildren,
 }: Props) => {
   return (
     <button
@@ -24,12 +26,15 @@ const MainButton = ({
         className={`${insideStyles} after:bg-main-black after:w-[50%] after:absolute after:h-full after:-left-full hover:after:-left-6  after:[transition-duration:0.2s] after:skew-x-[-45deg] after:z-[1] overflow-hidden w-full after:top-0 px-4 rounded-sm block uppercase py-2 tracking-wider font-bold text-sm relative`}
       >
         {link ? (
-          <Link href={`/${link}`} className="text-inherit z-[2] relative">
-            {nombre}
+          <Link
+            href={`/${link}`}
+            className="text-inherit z-[2] relative flex gap-2 items-center justify-center"
+          >
+            {leftChildren} {nombre} {children}
           </Link>
         ) : (
-          <span className="z-[2] relative">
-            {nombre} {children}
+          <span className="z-[2] relative flex gap-2 items-center justify-center">
+            {leftChildren} {nombre} {children}
           </span>
         )}
       </span>
