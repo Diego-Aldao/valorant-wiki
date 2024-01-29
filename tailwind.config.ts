@@ -19,7 +19,7 @@ const config: Config = {
       },
       fontFamily:{
         sans: "var(--raleway-font)",
-        bebas: "var(--bebas-font)",
+        unbounded: "var(--unbounded-font)"
       },
     },
   },

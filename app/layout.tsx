@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Raleway } from "next/font/google";
+import { Raleway, Unbounded } from "next/font/google";
 import Header from "./components/Layout/Header/Header";
 import Footer from "./components/Layout/Footer";
 import Aside from "./components/Layout/Aside/Aside";
@@ -16,10 +16,10 @@ const raleway = Raleway({
   variable: "--raleway-font",
 });
 
-const bebas = Bebas_Neue({
+const unbounded = Unbounded({
   subsets: ["latin"],
-  weight: ["400"],
-  variable: "--bebas-font",
+  weight: ["200", "300", "400", "500", "600", "700"],
+  variable: "--unbounded-font",
 });
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${raleway.variable} ${bebas.variable} antialiased`}
+      className={`${raleway.variable} ${unbounded.variable} antialiased`}
     >
       <body>
         <div className="grid md:grid-cols-[80px,1fr] w-full max-w-7xl mx-auto relative">
