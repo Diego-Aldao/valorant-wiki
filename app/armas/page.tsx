@@ -6,11 +6,12 @@ import { Arma, RespuestaAPIArma } from "../types/Armas";
 import Grid from "../components/PageArmas/Grid";
 import ordenarArmas from "../services/SortWeapons";
 import Filtro from "../components/PageArmas/Filtro";
+import { LS_ARMAS, URL_FETCH_ARMAS } from "../constants";
 
 export default function Page() {
   const { data, loading } = useFetch<RespuestaAPIArma>(
-    "https://valorant-api.com/v1/weapons?language=es-ES",
-    "armas"
+    URL_FETCH_ARMAS,
+    LS_ARMAS
   );
   const [currentArmas, setCurrentArmas] = useState<Arma[]>();
 
@@ -24,7 +25,7 @@ export default function Page() {
     <CustomSection titulo="arsenal">
       <div className="conteido-arsenal w-full">
         <header className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
-          <h2 className="font-bebas text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
+          <h2 className="font-unbounded uppercase font-bold tracking-tighter text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             elige tu arma
           </h2>
           {data && (
