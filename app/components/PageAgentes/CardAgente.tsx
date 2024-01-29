@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import DecoracionNombres from "./DecoracionNombres";
+import Link from "next/link";
 
 interface Props {
   imagenAgente: string;
@@ -8,7 +9,8 @@ interface Props {
   nombreAgente: string;
   outsideStyles?: string;
   insideStyles?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  esLink?: boolean;
 }
 
 export default function CardAgente({
@@ -18,37 +20,44 @@ export default function CardAgente({
   outsideStyles,
   insideStyles,
   children,
+  esLink,
 }: Props) {
   return (
-    <div className="contenedor w-full flex flex-col gap-10 items-center justify-center">
-      <div
-        className={`w-full  transition relative flex items-center justify-center bg-transparent rounded-lg ${outsideStyles}`}
+    <div
+      className={`transition w-full flex flex-col gap-10 items-center justify-center  ${outsideStyles}`}
+    >
+      <Link
+        href={esLink ? `agentes/${nombreAgente.toLowerCase()}` : ""}
+        className="card h-full w-full flex items-center justify-center relative"
       >
-        <Image
-          src={imagenAgente}
-          alt={`agente ${nombreAgente}`}
-          height={0}
-          width={0}
-          sizes="100vw"
-          className="w-full h-full object-cover z-[2] relative bottom-5 scale-110 [filter:drop-shadow(5px_5px_0px_white)]"
-        />
+        <div className="relative w-full h-full z-[2]">
+          <Image
+            src={imagenAgente}
+            alt={`agente ${nombreAgente}`}
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-full object-cover z-[2] relative bottom-5 scale-110 [filter:drop-shadow(5px_5px_0px_#ece8e1)]"
+            priority={false}
+          />
+        </div>
         <div
-          className={`imgbg absolute bg-main-red border-[10px] border-main-white overflow-hidden ${insideStyles}`}
+          className={`absolute bg-gradient-to-t from-main-black via-main-black to-main-red border-[10px] border-main-white overflow-hidden ${insideStyles}`}
         >
           {imagenBackground ? (
             <Image
               src={imagenBackground}
               alt={`background del agente ${nombreAgente}`}
-              height={0}
               width={0}
+              height={0}
               sizes="100vw"
-              className="w-full h-full object-cover scale-125 mix-blend-soft-light"
+              className="w-full h-full object-contain scale-[1.5] object-[0%,40px] mix-blend-overlay"
             />
           ) : (
-            <DecoracionNombres nombre={nombreAgente} cantidad={6} />
+            <DecoracionNombres nombre={nombreAgente} cantidad={8} />
           )}
         </div>
-      </div>
+      </Link>
       {children}
     </div>
   );
