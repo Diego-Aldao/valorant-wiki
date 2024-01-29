@@ -17,9 +17,9 @@ const Descripciones = ({
 }: Props) => {
   return (
     <div
-      className={`relative after:absolute after:w-[280px] after:max-w-[130%] after:h-[1px]  after:top-0 after:left-0 descripciones flex flex-col mx-auto md:m-0 gap-2 max-w-[400px] lg:max-w-[450px] w-full ${customClases}`}
+      className={`relative after:absolute md:after:w-[280px] after:w-[200px] lg:after:w-[350px] after:max-w-[100%] after:h-[1px]  after:top-0 after:left-0 descripciones flex flex-col mx-auto md:m-0 gap-2 max-w-[400px] lg:max-w-[450px] w-full ${customClases}`}
     >
-      <h2 className="uppercase text-inherit text-5xl md:text-6xl lg:text-7xl md:left-2 scale-x-110 left-1 relative w-fit pt-2  tracking-wide mb-4 font-bebas">
+      <h2 className="uppercase text-inherit text-3xl md:text-4xl lg:text-5xl relative w-fit pt-2 font-bold mb-4 font-unbounded">
         {titulo}
       </h2>
       <span className="font-semibold uppercase text-sm lg:text-lg text-inherit">
