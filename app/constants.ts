@@ -49,6 +49,25 @@ export const listadoSlots = {
     Passive: "pasiva",
   };
 
+export  const listadoPages = [
+    {
+      id: 1,
+      nombre: "inicio",
+    },
+    {
+      id: 2,
+      nombre: "agentes",
+    },
+    {
+      id: 3,
+      nombre: "mapas",
+    },
+    {
+      id: 4,
+      nombre: "armas",
+    },
+  ];
+
 export const URL_FETCH_AGENTES = "https://valorant-api.com/v1/agents?isPlayableCharacter=true&language=es-MX"
 export const URL_FETCH_ARMAS = "https://valorant-api.com/v1/weapons?language=es-ES"
 export const URL_FETCH_MAPAS = "https://valorant-api.com/v1/maps?language=es-ES"
