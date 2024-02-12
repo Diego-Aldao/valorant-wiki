@@ -12,11 +12,11 @@ import SwiperMapas from "../components/PageMapas/SwiperMapas";
 // Import Swiper styles
 import "swiper/css";
 import { LS_MAPAS, URL_FETCH_MAPAS } from "../constants";
-import useFilterMapas from "../hooks/useFilterMapas";
+import filtrarMapas from "../services/FiltrarMapas";
 
 export default function Page() {
   const { data: mapas } = useFetch<ResponseAPIMapas>(URL_FETCH_MAPAS, LS_MAPAS);
-  const { currentMapas } = useFilterMapas(mapas?.data);
+  const currentMapas = filtrarMapas(mapas?.data);
 
   return (
     <CustomSection titulo="mapas">
