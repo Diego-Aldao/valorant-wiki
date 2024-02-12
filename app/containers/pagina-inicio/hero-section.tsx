@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import imagenBackground from "../../assets/MainBackground.jpeg";
 import MainButton from "../../components/Buttons/MainButton";
+import blackLogo from "../../assets/valorantLogoBlack.svg";
 
 const HeroSection = () => {
   return (
@@ -17,18 +18,25 @@ const HeroSection = () => {
         />
       </div>
       <div className="contenido relative md:-top-12 lg:-top-20 flex gap-1 flex-col pt-32 md:pt-0 md:justify-center h-full w-full">
-        <span className="text-center text-white max-w-[300px] md:max-w-full mx-auto text-sm lg:text-base font-medium tracking-wide">
+        <span className="text-center text-white max-w-[300px] sm:max-w-[450px] md:max-w-full mx-auto text-sm lg:text-base font-medium tracking-wide">
           Tu fuente definitiva de información detallada sobre el universo de
           Valorant.
         </span>
-        <h1 className="uppercase text-5xl font-semibold text-center md:text-7xl lg:text-8xl xl:text-9xl">
+        <h1 className="uppercase text-4xl font-medium font-unbounded text-center sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
           valorant wiki
         </h1>
         <MainButton
           outsideStyles="border-secondary-white mt-10 mx-auto lg:min-w-[300px]"
           insideStyles="bg-main-red text-main-white md:text-lg"
           nombre="explorar"
-        />
+        >
+          <Image
+            src={blackLogo}
+            alt="logo valorant negro"
+            width={24}
+            height={24}
+          />
+        </MainButton>
       </div>
     </div>
   );
