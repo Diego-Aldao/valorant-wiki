@@ -12,17 +12,18 @@ export default function SwiperAgentes({ children }: Props) {
       loop={true}
       spaceBetween={-100}
       keyboard
+      slideToClickedSlide={true}
       breakpoints={{
         1024: {
           spaceBetween: -100,
           slidesPerView: 3,
         },
         1240: {
-          spaceBetween: -300,
+          spaceBetween: -250,
           slidesPerView: 3,
         },
       }}
-      className="w-full ml-auto !mr-0 mb-20 !hidden md:!block"
+      className="w-full mb-20 !hidden md:!block"
       centeredSlides={true}
     >
       {children}
