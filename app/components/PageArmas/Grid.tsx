@@ -13,9 +13,9 @@ const Grid = ({ armas }: Props) => {
       {armas.map((arma) => (
         <div
           key={arma.uuid}
-          className="item-grid p-6 md:p-8 lg:p-10  w-full flex flex-col gap-6 lg:gap-10 md:gap-7 border-[1px] border-secondary-black after:absolute after:w-[80%] after:h-full after:top-0 after:-left-[120%] after:transition-all group hover:after:-left-64 after:bg-main-red relative after:skew-x-[-45deg] overflow-hidden after:-z-[1]"
+          className="item-grid p-6 md:p-8 lg:p-10  w-full flex flex-col gap-6 lg:gap-10 md:gap-7 border-[1px] border-secondary-black after:absolute after:w-[80%] after:h-full after:top-0 after:-left-[135%] after:transition-all group hover:after:-left-44 lg:hover:after:-left-52 after:bg-main-red relative after:skew-x-[-45deg] overflow-hidden after:-z-[1]"
         >
-          <h3 className="uppercase font-bebas text-[40px] leading-10 lg:text-6xl">
+          <h3 className="uppercase font-unbounded text-xl leading-10 lg:text-4xl tracking-tight font-bold">
             {arma.displayName}
           </h3>
           <div className="imagen h-[30vw] sm:h-[15vw] lg:h-[150px] transition-transform group-hover:scale-105">
@@ -28,9 +28,10 @@ const Grid = ({ armas }: Props) => {
             />
           </div>
           <MainButton
-            outsideStyles="justify-self-end self-end md:max-w-[150px] min-w-[150px] md:min-w-[150px] lg:min-w-[200px] lg:max-w-[200px] border-main-red "
+            outsideStyles="justify-self-end self-end md:max-w-[150px] min-w-[160px] md:min-w-[150px] lg:min-w-[200px] lg:max-w-[200px] border-main-red "
             insideStyles="text-xs capitalize lg:text-sm after:bg-main-red group-hover:after:-left-6"
             nombre="ver detalle"
+            link={`armas/${arma.displayName.toLowerCase()}`}
           />
         </div>
       ))}
