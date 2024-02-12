@@ -1,3 +1,91 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: #302732;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+span,
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+div {
+  color: #ece8e1;
+}
+
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/*CLASES SWIPER*/
+
+/* muchas propiedades necesitan !important obligatoriamente por la manera en que esta hecha la libreria de swiper*/
+
+.swiper-pagination {
+  background: transparent;
+  position: relative !important;
+  bottom: 220px !important;
+  left: 0px !important;
+  width: 500px !important;
+}
+.swiper-pagination-bullet {
+  background: transparent !important;
+  width: 35px !important;
+  height: 6px !important;
+  border: 1px solid #ece8e1;
+  border-radius: 5px !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fe4655 !important;
+  border: 1px solid #fe4655;
+}
+
+.swiper-slide-active {
+  z-index: 3;
+}
+.swiper-slide-next,
+.swiper-slide-prev {
+  z-index: 2;
+}
+
+.swiper-scrollbar {
+  background: #8c818a !important;
+  height: 5px !important;
+}
+.swiper-scrollbar-drag {
+  background: red !important;
+}
+
+/*ESTILOS PARA LA SCROLLBAR*/
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3c323e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fe4655;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7864;
+}
