@@ -9,21 +9,23 @@ import CustomSectionID from "@/app/containers/paginas-secundarias/custom-section
 import DecoracionRol from "@/app/components/PageAgentes/AgentesID/DecoracionRol";
 import MainInfo from "@/app/components/PageAgentes/AgentesID/MainInfo";
 import { LS_AGENTES, URL_FETCH_AGENTES } from "@/app/constants";
-import useFilterAgentes from "@/app/hooks/useFilterAgentes";
 import { Icon } from "@iconify/react";
+import { useParams } from "next/navigation";
+import filtrarAgentes from "@/app/services/FiltrarAgentes";
 
 export default function PaginaAgentesID() {
   const { data: dataAgentes } = useFetch<RespuestaAPIAgentes>(
     URL_FETCH_AGENTES,
     LS_AGENTES
   );
-
-  const { currentAgente } = useFilterAgentes(dataAgentes?.data);
+  const { id } = useParams();
+  const currentAgente = filtrarAgentes(id, dataAgentes?.data);
 
   return (
     <CustomSectionID
       titulo={currentAgente?.displayName}
       customClassesTitulo="md:hidden"
+      customClassesSection="md:flex-row-reverse md:pb-20 md:gap-2"
     >
       {currentAgente && (
         <>
@@ -44,7 +46,7 @@ export default function PaginaAgentesID() {
         </>
       )}
       <MainButton
-        outsideStyles="md:border-main-red md:after:bg-main-black md:before:bg-main-white mx-auto md:mr-10 lg:mr-0 mt-auto md:!min-w-[200px] lg:!min-w-[250px] md:absolute md:bottom-10 md:left-[calc(50%-100px)] lg:left-[calc(50%-125px)] z-[5]"
+        outsideStyles="md:border-main-red md:after:bg-main-black md:before:bg-main-white mx-auto md:mr-10 lg:mr-0 mt-auto md:!min-w-[200px] lg:!min-w-[250px] md:absolute md:bottom-5 md:left-[calc(50%-100px)] lg:left-[calc(50%-125px)] z-[5]"
         insideStyles="md:bg-main-red after:bg-main-red md:after:bg-main-black text-xs lg:text-sm text-main-white"
         nombre="volver a la lista"
         link="agentes"
