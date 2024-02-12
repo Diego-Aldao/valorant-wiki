@@ -1,25 +1,16 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CustomSection from "../containers/paginas-secundarias/custom-section";
 import useFetch from "../hooks/useFetch";
-import { Arma, RespuestaAPIArma } from "../types/Armas";
+import { RespuestaAPIArma } from "../types/Armas";
 import Grid from "../components/PageArmas/Grid";
-import ordenarArmas from "../services/SortWeapons";
 import Filtro from "../components/PageArmas/Filtro";
 import { LS_ARMAS, URL_FETCH_ARMAS } from "../constants";
+import useSortArmas from "../hooks/useSortArmas";
 
-export default function Page() {
-  const { data, loading } = useFetch<RespuestaAPIArma>(
-    URL_FETCH_ARMAS,
-    LS_ARMAS
-  );
-  const [currentArmas, setCurrentArmas] = useState<Arma[]>();
-
-  useEffect(() => {
-    if (!data || loading) return;
-    const armasOrdenadas = data?.data.sort(ordenarArmas);
-    setCurrentArmas(armasOrdenadas);
-  }, [data, loading]);
+export default function PageArmas() {
+  const { data } = useFetch<RespuestaAPIArma>(URL_FETCH_ARMAS, LS_ARMAS);
+  const { currentArmas, setCurrentArmas } = useSortArmas(data?.data);
 
   return (
     <CustomSection titulo="arsenal">
