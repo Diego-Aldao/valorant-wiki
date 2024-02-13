@@ -16,7 +16,7 @@ export default function SlideMapa({ dataMapa }: Props) {
         swiperSlide.isActive ? "opacity-100" : "opacity-30"
       } card flex flex-col relative pt-10 mb-10 transition-opacity`}
     >
-      <h2 className="text-7xl [text-shadow:1px_1px_5px_#302732] xl:text-8xl font-bebas absolute top-0 left-10">
+      <h2 className="text-5xl [text-shadow:1px_1px_5px_#302732] xl:text-6xl font-unbounded uppercase absolute top-3 left-10 font-bold tracking-tighter">
         {dataMapa.displayName}
       </h2>
       <div className="w-full rounded-lg overflow-hidden min-h-[486px]">
@@ -29,7 +29,7 @@ export default function SlideMapa({ dataMapa }: Props) {
           className="w-full h-full"
         />
       </div>
-      <p className="absolute min-h-24 right-14 rounded-tr-none -bottom-[40px] rounded-lg bg-main-black p-4 max-w-[450px] text-sm xl:text-base xl:p-5 ">
+      <p className="absolute min-h-24 right-[55px] rounded-tr-none -bottom-[40px] rounded-lg bg-main-black p-4 max-w-[450px] text-sm xl:text-base xl:p-5">
         {dataMapa.narrativeDescription}
       </p>
       <div className="absolute left-48 -bottom-[40px] rounded-lg overflow-hidden max-h-[180px] max-w-[100px] hidden xl:block border-2 border-main-black shadow-md shadow-main-black">
