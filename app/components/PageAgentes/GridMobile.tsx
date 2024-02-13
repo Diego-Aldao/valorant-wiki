@@ -20,8 +20,9 @@ export default function GridMobile({ dataAgentes }: Props) {
           >
             <MainButton
               outsideStyles="mx-auto border-main-red min-w-[180px]"
-              insideStyles="text-xs py-1 px-2"
+              insideStyles="text-xs py-1 px-2 after:bg-main-red"
               nombre={`ver info de ${agente.displayName}`}
+              link={`agentes/${agente.displayName.toLowerCase()}`}
             />
           </CardAgente>
         </React.Fragment>
