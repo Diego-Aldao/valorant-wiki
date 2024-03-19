@@ -20,7 +20,6 @@ div {
 }
 
 img {
-  user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -39,6 +38,7 @@ img {
   left: 0px !important;
   width: 500px !important;
 }
+
 .swiper-pagination-bullet {
   background: transparent !important;
   width: 35px !important;
@@ -56,6 +56,7 @@ img {
 .swiper-slide-active {
   z-index: 3;
 }
+
 .swiper-slide-next,
 .swiper-slide-prev {
   z-index: 2;
@@ -65,6 +66,7 @@ img {
   background: #8c818a !important;
   height: 5px !important;
 }
+
 .swiper-scrollbar-drag {
   background: red !important;
 }
