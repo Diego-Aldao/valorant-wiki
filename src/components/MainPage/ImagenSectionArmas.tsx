@@ -6,22 +6,25 @@ import { Icon } from "@iconify/react";
 
 export default function ImagenSectionArmas() {
   return (
-    <div className="hidden relative md:flex min-w-[320px] justify-center md:w-1/2">
+    <div className="hidden relative md:flex min-w-[400px] w-1/2 justify-center ">
       <Image
         src={arma}
-        width={512}
-        height={148}
-        alt="imagen del arma x de valorant"
-        className="[transform:rotateZ(-45deg)_rotateY(180deg)_scale(1.2)] lg:[transform:rotateZ(-45deg)_rotateY(180deg)_scale(1)] [filter:drop-shadow(10px_10px_0_#fe4655)] relative z-[2]"
+        alt="imagen arma"
+        width={0}
+        height={0}
+        sizes="100vw"
+        className="w-full h-full object-cover [transform:rotateY(180deg)_rotateZ(25deg)] [filter:drop-shadow(10px_10px_0px_#fe4655)] relative z-10"
       />
-      <div className="estadistica-1 absolute -top-2 w-[35%] lg:w-[30%] h-11 left-[50%] lg:left-[55%] z-[1] bg-main-red flex justify-end items-center pr-2">
-        <Icon icon="ic:outline-info" className="h-7 w-7" />
-      </div>
-      <div className="estadistica-2 absolute top-14 w-[40%] lg:w-[40%] h-11 left-[50%] z-[1] bg-main-red flex justify-end items-center pr-2">
-        <Icon icon="ion:stats-chart-sharp" className="h-7 w-7" />
-      </div>
-      <div className="estadistica-3 absolute top-[120px] w-[60%] lg:w-[60%] h-11 left-[35%] z-[1] bg-main-red flex justify-end items-center pr-2">
-        <Icon icon="mdi:target" className="h-7 w-7" />
+      <div className="estadisticas w-full h-full absolute right-0 flex flex-col gap-3 justify-center items-end top-3">
+        <span className="h-8 w-[37%] mr-10 bg-main-red flex items-center pr-2 justify-end rounded-sm">
+          <Icon icon="ic:outline-info" className="h-6 w-6" />
+        </span>
+        <span className="h-8 w-[50%] mr-5 bg-main-red flex items-center pr-2 justify-end rounded-sm">
+          <Icon icon="ion:stats-chart-sharp" className="h-6 w-6" />
+        </span>
+        <span className="h-8 w-2/3 bg-main-red flex items-center pr-2 justify-end rounded-sm">
+          <Icon icon="mdi:target" className="h-6 w-6" />
+        </span>
       </div>
     </div>
   );
