@@ -18,7 +18,7 @@ export default function PageAgentes() {
   );
 
   return (
-    <CustomSection titulo="agentes">
+    <CustomSection titulo="agentes" pageAgentes={true}>
       {dataAgentes && <GridMobile dataAgentes={dataAgentes.data} />}
       <SwiperAgentes>
         {dataAgentes?.data.map((agente) => (
@@ -28,10 +28,11 @@ export default function PageAgentes() {
                 imagenAgente={agente.fullPortrait}
                 nombreAgente={agente.displayName}
                 esLink={true}
-                outsideStyles={`h-[650px] mt-10 ${
+                cardStyles={` ${
                   isActive ? "grayscale-0 scale-100" : "grayscale scale-75"
                 } ${!isActive && !isNext && !isPrev && "opacity-20"}`}
-                insideStyles="w-[250px] h-[550px]"
+                backgroundStyles="w-[250px] h-[550px] lg:w-[270px] xl:w-[300px] 2xl:w-[320px]"
+                agentStyles="md:h-[500px] lg:h-[550px] xl:h-[600px] 2xl:h-[650px]"
               >
                 <MainButton
                   outsideStyles={`mx-auto mt-5 transition-opacity border-main-red min-w-[180px] md:min-w-[200px] ${
