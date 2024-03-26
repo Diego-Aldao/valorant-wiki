@@ -25,7 +25,7 @@ export default function PaginaAgentesID() {
     <CustomSectionID
       titulo={currentAgente?.displayName}
       customClassesTitulo="md:hidden"
-      customClassesSection="md:flex-row-reverse md:pb-20 md:gap-2"
+      customClassesSection="md:flex-row-reverse md:pb-20 md:gap-2 max-w-7xl 2xl:px-0 mx-auto"
     >
       {currentAgente && (
         <>
@@ -34,8 +34,9 @@ export default function PaginaAgentesID() {
             imagenAgente={currentAgente.fullPortrait}
             nombreAgente={currentAgente.displayName}
             imagenBackground={currentAgente.background}
-            outsideStyles="h-[450px] lg:h-[650px] max-w-[350px] mx-auto md:m-0 lg:max-w-[450px] lg:scale-[1.15] lg:absolute lg:top-10 lg:right-0 z-[2] xl:right-16 md:mt-16 lg:mt-20"
-            insideStyles="w-[200px] h-[400px] lg:w-[250px] lg:h-[500px] md:border-main-black"
+            cardStyles="!w-fit mx-auto md:mx-0 h-full z-[3] md:relative md:-right-6 lg:-right-24"
+            backgroundStyles=" md:border-terciary-black md:w-[250px] lg:w-[300px]"
+            agentStyles="h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] 2xl:h-[650px]"
           />
           <MainInfo
             titulo={currentAgente.displayName}
@@ -46,8 +47,8 @@ export default function PaginaAgentesID() {
         </>
       )}
       <MainButton
-        outsideStyles="md:border-main-red md:after:bg-main-black md:before:bg-main-white mx-auto md:mr-10 lg:mr-0 mt-auto md:!min-w-[200px] lg:!min-w-[250px] md:absolute md:bottom-5 md:left-[calc(50%-100px)] lg:left-[calc(50%-125px)] z-[5]"
-        insideStyles="md:bg-main-red after:bg-main-red md:after:bg-main-black text-xs lg:text-sm text-main-white"
+        outsideStyles="md:border-main-red md:after:bg-main-black md:before:bg-main-black xl:before:bg-main-white mx-auto md:mr-10 lg:mr-0 mt-auto md:!min-w-[200px] lg:!min-w-[250px] md:absolute md:bottom-5 md:left-[calc(50%-100px)] lg:left-[calc(50%-125px)] z-[5] "
+        insideStyles="md:bg-main-red after:bg-main-red md:after:bg-main-black  text-xs lg:text-sm text-main-white"
         nombre="volver a la lista"
         link="agentes"
         leftChildren={

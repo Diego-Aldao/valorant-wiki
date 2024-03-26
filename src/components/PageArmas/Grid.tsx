@@ -28,8 +28,8 @@ const Grid = ({ armas }: Props) => {
             />
           </div>
           <MainButton
-            outsideStyles="justify-self-end self-end md:max-w-[150px] min-w-[160px] md:min-w-[150px] lg:min-w-[200px] lg:max-w-[200px] border-main-red "
-            insideStyles="text-xs capitalize lg:text-sm after:bg-main-red group-hover:after:-left-6"
+            outsideStyles="justify-self-end self-end md:max-w-[150px] min-w-[160px] md:min-w-[150px] lg:min-w-[200px] lg:max-w-[200px] border-main-red group-hover:before:left-6 group-hover:after:right-6"
+            insideStyles="text-xs capitalize lg:text-sm after:bg-main-red"
             nombre="ver detalle"
             link={`armas/${arma.displayName.toLowerCase()}`}
           />

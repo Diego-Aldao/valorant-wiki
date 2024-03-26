@@ -3,12 +3,12 @@ import valorantLogo from "../assets/valorantLogoRed.svg";
 import Link from "next/link";
 
 interface Props {
-  customClasses: string;
+  customClasses?: string;
 }
 
 const Logo = ({ customClasses }: Props) => {
   return (
-    <Link href="/" className={`${customClasses}`}>
+    <Link href="/" className={`${customClasses} pointer-events-auto`}>
       <Image
         src={valorantLogo}
         alt="logo valorant"

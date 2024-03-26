@@ -10,7 +10,7 @@ import ImagenSectionArmas from "../components/MainPage/ImagenSectionArmas";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden mt-12 md:mt-16 lg:mt-20">
+    <main className="overflow-x-hidden">
       <HeroSection />
       <SectionAgentes>
         <ImagenesSectionAgentes />

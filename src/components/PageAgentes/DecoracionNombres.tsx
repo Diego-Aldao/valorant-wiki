@@ -13,8 +13,8 @@ export default function DecoracionNombres({ nombre, cantidad }: Props) {
       <span
         key={i}
         className={`${
-          i >= 1 ? "text-5xl" : "text-6xl"
-        } uppercase relative mix-blend-soft-light font-unbounded leading-[1.4] font-bold`}
+          i >= 1 ? "text-3xl md:text-5xl" : "text-4xl md:text-6xl"
+        } uppercase relative mix-blend-soft-light font-unbounded leading-[1.4] md:leading-[1.2] xl:leading-[1.4] 2xl:leading-[1.5] font-bold`}
       >
         {nombre}
       </span>

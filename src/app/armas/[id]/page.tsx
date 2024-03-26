@@ -44,10 +44,10 @@ export default function PageArmasID() {
     <CustomSectionID
       titulo={currentArma?.displayName}
       customClassesTitulo="w-full md:text-main-black"
-      customClassesSection="md:gap-20 after:w-full after:-left-80 lg:after:-left-96"
+      customClassesSection="md:gap-20 md:after:w-[100%] md:after:-right-72 md:after:-right-80 lg:after:w-[80%] xl:after:w-[70%] lg:h-full"
     >
       {currentArma && (
-        <div className="contenedor relative w-full flex flex-col">
+        <div className="contenedor relative w-full flex flex-col z-[2] max-w-7xl mx-auto">
           <div className="imagen w-full h-[150px] sm:h-[180px] lg:h-[240px] max-w-[800px] mx-auto">
             <Image
               src={currentArma.displayIcon}
