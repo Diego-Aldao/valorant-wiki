@@ -45,10 +45,10 @@ export default function Habilidades({ habilidades }: Props) {
         ))}
       </div>
       <div className="desc-habilidad flex flex-col gap-2">
-        <span className="uppercase font-bold text-lg text-center md:text-left md:text-main-black">
+        <span className="uppercase font-bold text-lg text-center md:text-left md:text-main-black line-clamp-1">
           {listadoSlots[currentHabilidad.slot]} - {currentHabilidad.displayName}
         </span>
-        <p className="leading-6 text-sm w-full text-center md:text-left md:text-main-black font-medium">
+        <p className="leading-6 text-sm w-full text-center md:text-left md:text-main-black font-medium h-[240px] overflow-hidden line-clamp-1 [-webkit-line-clamp:10]">
           {currentHabilidad?.description}
         </p>
       </div>

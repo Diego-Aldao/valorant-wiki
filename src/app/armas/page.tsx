@@ -14,7 +14,7 @@ export default function PageArmas() {
 
   return (
     <CustomSection titulo="arsenal">
-      <div className="conteido-arsenal w-full max-w-7xl mx-auto min-h-[100vh]">
+      <div className="contenido-arsenal w-full max-w-7xl mx-auto min-h-[100vh] mb-10">
         <header className="flex flex-col gap-4 md:flex-row md:justify-between md:items-center">
           <h2 className="font-unbounded uppercase font-bold tracking-tighter text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             elige tu arma

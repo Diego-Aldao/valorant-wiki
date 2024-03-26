@@ -20,9 +20,12 @@ export default function Page() {
 
   return (
     <CustomSection titulo="mapas">
-      <div className="grid mt-10 grid-cols-[repeat(auto-fill,minmax(240px,_1fr))] md:grid-cols-[repeat(auto-fill,minmax(300px,_1fr))] gap-y-12 gap-x-4 w-full lg:hidden">
+      <div className="grid mt-10 grid-cols-[repeat(auto-fill,minmax(240px,_1fr))] md:grid-cols-[repeat(auto-fill,minmax(300px,_1fr))] gap-y-12 gap-x-4 w-full lg:hidden min-h-[100vh]">
         {currentMapas?.map((mapa) => (
-          <div key={mapa.uuid} className="w-full flex flex-col gap-4">
+          <div
+            key={mapa.uuid}
+            className="w-full flex flex-col gap-4 min-h-[550px]"
+          >
             <h2 className="text-3xl tracking-tighter font-semibold uppercase font-unbounded">
               {mapa.displayName}
             </h2>
@@ -44,7 +47,7 @@ export default function Page() {
           </div>
         ))}
       </div>
-      <div className="hidden lg:block relative mb-20 max-w-7xl mx-auto min-h-[620px]">
+      <div className="hidden lg:block relative mb-20 max-w-7xl mx-auto min-h-[620px] xl:min-h-[675px]">
         <DecoracionesPixel />
         <SwiperMapas>
           {currentMapas?.map((mapa) => (
