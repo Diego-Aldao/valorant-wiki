@@ -36,7 +36,12 @@ const Aside = () => {
               : "-left-12 opacity-0 invisible"
           }`}
         >
-          <div className="logo-aside flex gap-2 items-center w-full justify-center">
+          <div
+            className="logo-aside flex gap-2 items-center w-full justify-center"
+            onClick={() => {
+              setIsOpen((isOpen) => !isOpen);
+            }}
+          >
             <Logo customClasses="h-16 justify-center flex items-center w-fit h-fit" />
             <span className="uppercase font-medium text-xl pt-1 font-unbounded">
               valorant wiki
