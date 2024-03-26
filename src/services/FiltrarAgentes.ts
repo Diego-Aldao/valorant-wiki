@@ -6,7 +6,7 @@ export default function filtrarAgentes(
 ) {
   if (!agentes) return;
   const currentAgente = agentes.filter(
-    (agente) => agente.displayName.toLowerCase() === id
+    (agente) => agente.displayName.toLowerCase().replaceAll("/", "") === id
   );
 
   return currentAgente[0];
