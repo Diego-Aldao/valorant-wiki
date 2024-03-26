@@ -242,6 +242,29 @@ export const listadoAgentes = [
   },
 ];
 
+export const listadoRedes = [
+  {
+    id: 1,
+    nombre: "instagram",
+    icono: "instagram",
+  },
+  {
+    id: 2,
+    nombre: "facebook",
+    icono: "facebook",
+  },
+  {
+    id: 3,
+    nombre: "twitter",
+    icono: "twitter-x",
+  },
+  {
+    id: 4,
+    nombre: "youtube",
+    icono: "youtube",
+  },
+];
+
 export const URL_FETCH_AGENTES =
   "https://valorant-api.com/v1/agents?isPlayableCharacter=true&language=es-MX";
 export const URL_FETCH_ARMAS =
