@@ -265,6 +265,29 @@ export const listadoRedes = [
   },
 ];
 
+export const listadoPopulares = [
+  {
+    id: 1,
+    link: "/agentes/sova",
+    nombre: "sova",
+  },
+  {
+    id: 2,
+    link: "/agentes/viper",
+    nombre: "viper",
+  },
+  {
+    id: 3,
+    link: "/mapas",
+    nombre: "mapas",
+  },
+  {
+    id: 4,
+    link: "/armas/vandal",
+    nombre: "vandal",
+  },
+];
+
 export const URL_FETCH_AGENTES =
   "https://valorant-api.com/v1/agents?isPlayableCharacter=true&language=es-MX";
 export const URL_FETCH_ARMAS =
