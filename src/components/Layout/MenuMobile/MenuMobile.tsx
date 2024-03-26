@@ -1,11 +1,12 @@
 import React, { Dispatch, SetStateAction } from "react";
 import Logo from "../../Logo";
 
-import ListaMenuMobile from "./ListaMenuMobile";
+import ListaMenuMobile from "../../ListaLinksNav";
 import { Icon } from "@iconify/react";
-import Redes from "../Aside/Redes";
+import Redes from "../../Redes";
 import { listadoAgentes, listadoArmas } from "@/src/constants";
 import Link from "next/link";
+import ButtonPlay from "../../Buttons/ButtonPlay";
 
 interface Props {
   menuMobileVisible: boolean;
@@ -18,7 +19,7 @@ export default function MenuMobile({
 }: Props) {
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full min-h-[100vh] flex flex-col transition-all bg-main-black z-40 md:hidden ${
+      className={`fixed top-0 left-0 w-full h-full min-h-[100vh] flex flex-col pb-10 transition-all bg-main-black z-40 md:hidden ${
         menuMobileVisible
           ? "opacity-100 visible [transform:translate3d(0px,0px,0px)]"
           : "opacity-0 invisible [transform:translate3d(100%,0px,0px)]"
@@ -85,12 +86,7 @@ export default function MenuMobile({
           />
         </div>
       </div>
-      <span className="boton-jugar mx-auto mt-auto w-fit flex items-center justify-center font-bold rounded-sm h-fit px-4 py-2 bg-main-red uppercase text-main-white">
-        juega ahora
-      </span>
-      <footer className="mt-10 flex items-center h-14 justify-center">
-        <span>valorant wiki</span>
-      </footer>
+      <ButtonPlay customClases="flex mx-auto mt-auto" />
     </div>
   );
 }
