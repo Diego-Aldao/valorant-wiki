@@ -15,15 +15,23 @@ export default function SwiperAgentes({ children }: Props) {
       slideToClickedSlide={true}
       breakpoints={{
         1024: {
-          spaceBetween: -100,
+          spaceBetween: 0,
           slidesPerView: 3,
         },
         1240: {
           spaceBetween: -250,
           slidesPerView: 3,
         },
+        1440: {
+          spaceBetween: 0,
+          slidesPerView: 4,
+        },
+        1536: {
+          spaceBetween: -50,
+          slidesPerView: 4,
+        },
       }}
-      className="w-full mb-20 !hidden md:!block"
+      className="w-full mb-10 !hidden md:!block"
       centeredSlides={true}
     >
       {children}
