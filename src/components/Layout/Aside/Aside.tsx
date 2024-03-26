@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Redes from "./Redes";
+import Redes from "../../Redes";
 import ButtonAside from "../../Buttons/ButtonAside";
 import Logo from "../../Logo";
 import DecoracionAside from "./DecoracionAside";

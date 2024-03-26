@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import React from "react";
 import { listadoPages, listadoAgentes, listadoArmas } from "@/src/constants";
-import ListaMenuMobile from "../MenuMobile/ListaMenuMobile";
+import ListaMenuMobile from "../../ListaLinksNav";
 
 const NavDesktop = () => {
   const { id } = useParams();
