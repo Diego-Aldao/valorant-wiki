@@ -16,7 +16,7 @@ export default function SwiperMapas({ children }: Props) {
       pagination={{ clickable: true }}
       className="relative"
       loop={true}
-      breakpoints={{ 1240: { slidesPerView: 1.2, spaceBetween: 50 } }}
+      breakpoints={{ 1280: { slidesPerView: 1.2, spaceBetween: 50 } }}
     >
       {children}
     </Swiper>
