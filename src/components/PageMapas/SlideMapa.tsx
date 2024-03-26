@@ -13,8 +13,10 @@ export default function SlideMapa({ dataMapa }: Props) {
   return (
     <div
       className={`${
-        swiperSlide.isActive ? "opacity-100" : "opacity-30"
-      } card flex flex-col relative pt-10 mb-10 transition-opacity`}
+        swiperSlide.isActive
+          ? "opacity-100 scale-100"
+          : "opacity-30 scale-[0.85]"
+      } card flex flex-col relative pt-10 mb-10 transition-[transform,opacity]`}
     >
       <h2 className="text-5xl [text-shadow:1px_1px_5px_#302732] xl:text-6xl font-unbounded uppercase absolute top-3 left-10 font-bold tracking-tighter">
         {dataMapa.displayName}
