@@ -15,11 +15,12 @@ export default function GridMobile({ dataAgentes }: Props) {
           <CardAgente
             nombreAgente={agente.displayName}
             imagenAgente={agente.fullPortrait}
-            outsideStyles="h-[450px] max-w-[450px]"
-            insideStyles="w-[200px] h-[400px]"
+            backgroundStyles="w-[250px] h-[550px]"
+            agentStyles="w-[320px] h-[450px] sm:h-[450px] sm:w-full"
+            esLink={true}
           >
             <MainButton
-              outsideStyles="mx-auto border-main-red min-w-[180px]"
+              outsideStyles="mx-auto mt-5 border-main-red min-w-[180px]"
               insideStyles="text-xs py-1 px-2 after:bg-main-red"
               nombre={`ver info de ${agente.displayName}`}
               link={`agentes/${agente.displayName.toLowerCase()}`}
