@@ -33,6 +33,9 @@ export default function RootLayout({
       lang="es"
       className={`${raleway.variable} ${unbounded.variable} antialiased scroll-smooth`}
     >
+      <head>
+        <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+      </head>
       <body>
         <SpeedInsights />
         <Header />
