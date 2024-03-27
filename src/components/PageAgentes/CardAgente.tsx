@@ -26,7 +26,7 @@ function LinkCard({
     <div
       className={`transition-[transform,opacity] w-full h-full flex flex-col gap-5 items-center justify-center ${cardStyles}`}
     >
-      <span className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-semibold relative z-10 font-unbounded uppercase ">
+      <span className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-semibold relative z-10 font-unbounded uppercase">
         {nombreAgente}
       </span>
       <Link
@@ -45,7 +45,7 @@ function LinkCard({
           />
         </div>
         <div
-          className={`absolute bg-gradient-to-t from-main-black h-[85%] via-main-black to-main-red border-[10px]  border-main-white overflow-hidden ${backgroundStyles}`}
+          className={`absolute bg-gradient-to-t from-main-black h-[85%] via-main-black to-main-red border-[10px] border-main-white overflow-hidden ${backgroundStyles} min-w-[250px] lg:min-w-[270px] xl:min-w-[300px]`}
         >
           <DecoracionNombres nombre={nombreAgente} cantidad={8} />
         </div>
@@ -79,7 +79,7 @@ function IdCard({
         />
       </div>
       <div
-        className={`absolute bg-gradient-to-t from-main-black h-[85%] via-main-black min-w-[235px] to-main-red border-[10px]  border-main-white overflow-hidden ${backgroundStyles}`}
+        className={`absolute bg-gradient-to-t from-main-black h-[85%] via-main-black min-w-[235px] to-main-red border-[10px] border-terciary-black overflow-hidden ${backgroundStyles}`}
       >
         {imagenBackground && (
           <Image
@@ -88,7 +88,7 @@ function IdCard({
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-full object-cover scale-[1.5] object-[50%,40px] mix-blend-overlay  "
+            className="w-full h-full object-cover scale-[1.5] object-[50%,40px] mix-blend-overlay"
           />
         )}
       </div>

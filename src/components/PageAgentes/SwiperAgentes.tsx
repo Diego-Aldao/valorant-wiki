@@ -31,7 +31,7 @@ export default function SwiperAgentes({ children }: Props) {
           slidesPerView: 4,
         },
       }}
-      className="w-full mb-10 !hidden md:!block"
+      className="w-full mb-10 !hidden md:!block min-h-[640px] lg:min-h-[695px] xl:min-h-[745px]"
       centeredSlides={true}
     >
       {children}

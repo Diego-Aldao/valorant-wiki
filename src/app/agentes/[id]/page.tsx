@@ -25,7 +25,7 @@ export default function PaginaAgentesID() {
     <CustomSectionID
       titulo={currentAgente?.displayName}
       customClassesTitulo="md:hidden"
-      customClassesSection="md:flex-row-reverse md:gap-2 max-w-7xl 2xl:px-0 mx-auto"
+      customClassesSection="md:flex-row-reverse md:gap-2 max-w-7xl 2xl:px-0 mx-auto !min-h-[100vh]"
     >
       {currentAgente && (
         <>
@@ -47,7 +47,7 @@ export default function PaginaAgentesID() {
         </>
       )}
       <MainButton
-        outsideStyles="md:border-main-red md:after:bg-main-black md:before:bg-main-black xl:before:bg-main-white mx-auto md:mx-0 min-w-[250px] md:!min-w-[200px] lg:!min-w-[250px] md:absolute md:bottom-10 md:left-[calc(50%-100px)] lg:left-[calc(50%-125px)] z-[5] "
+        outsideStyles="md:border-main-red md:after:bg-main-black md:before:bg-main-black mt-auto xl:before:bg-main-white mx-auto md:mx-0 min-w-[250px] md:!min-w-[200px] lg:!min-w-[250px] md:absolute md:bottom-10 md:left-[calc(50%-100px)] lg:left-[calc(50%-125px)] z-[5] "
         insideStyles="md:bg-main-red after:bg-main-red md:after:bg-main-black  text-xs text-main-white"
         nombre="ver todos los agentes"
         link="agentes"
