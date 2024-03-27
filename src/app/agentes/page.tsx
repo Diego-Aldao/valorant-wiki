@@ -19,7 +19,7 @@ export default function PageAgentes() {
 
   return (
     <CustomSection titulo="agentes" pageAgentes={true}>
-      {dataAgentes && <GridMobile dataAgentes={dataAgentes.data} />}
+      <GridMobile dataAgentes={dataAgentes?.data} />
       <SwiperAgentes>
         {dataAgentes?.data.map((agente) => (
           <SwiperSlide key={agente.uuid}>
