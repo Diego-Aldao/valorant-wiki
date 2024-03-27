@@ -3,6 +3,7 @@ import { Raleway, Unbounded } from "next/font/google";
 import Header from "../components/Layout/Header/Header";
 import Footer from "../components/Layout/Footer";
 import Aside from "../components/Layout/Aside/Aside";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "../globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
       className={`${raleway.variable} ${unbounded.variable} antialiased scroll-smooth`}
     >
       <body>
+        <SpeedInsights />
         <Header />
         <Aside />
         {children}
