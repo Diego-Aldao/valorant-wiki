@@ -4,13 +4,13 @@ import MainButton from "../Buttons/MainButton";
 import CardAgente from "./CardAgente";
 
 interface Props {
-  dataAgentes: Agente[];
+  dataAgentes?: Agente[];
 }
 
 export default function GridMobile({ dataAgentes }: Props) {
   return (
-    <div className="grid-mobile md:hidden grid grid-cols-[repeat(auto-fill,minmax(250px,_1fr))] gap-4 gap-y-16">
-      {dataAgentes.map((agente) => (
+    <div className="grid-mobile md:hidden grid grid-cols-[repeat(auto-fill,minmax(250px,_1fr))] gap-4 gap-y-16 min-h-[100vh]">
+      {dataAgentes?.map((agente) => (
         <React.Fragment key={agente.uuid}>
           <CardAgente
             nombreAgente={agente.displayName}
